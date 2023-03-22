@@ -14,9 +14,9 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: $fz-default;
+  font-size: $fz-modifier;
   line-height: 24px;
-  font-family: $ff-placeholder;
+  font-family: $ff-mono;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -30,8 +30,9 @@ html {
 body {
   width: 100%;
   height: 100%;
-
+  font-size: $fz-default;
   background-color: $color-default-white;
+  position: relative;
 }
 
 a {
@@ -56,12 +57,6 @@ textarea {
 // rgba не подойдет, сконвертируйте цвет в hex без прозрачности
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
-input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
-
-  -webkit-text-fill-color: $color-default-black;
-}
-
 // firefox placeholder \ invalid fix + ios bdrs
 input,
 textarea {
@@ -126,4 +121,16 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #008fcc inset;
+  -webkit-text-fill-color: $color-default-white;
+  outline: none;
+}
+
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px #008fcc inset;
+  -webkit-text-fill-color: $color-default-white;
 }

@@ -69,3 +69,35 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.wide-screen-text {
+  display: inline;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.mobile-text {
+  display: none;
+
+  @include vp-767 {
+    display: inline;
+  }
+}
+
+.is-closed {
+  max-height: 0;
+}
+
+.is-closed-mobile {
+  @include vp-767 {
+    max-height: 0;
+  }
+}
+
+.is-hidden-mobile {
+  @include vp-767 {
+    display: none;
+  }
+}

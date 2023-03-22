@@ -9,11 +9,37 @@
 // }
 
 @font-face {
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
+  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2"),
+    url("../../fonts/roboto-condensed-regular.woff") format("woff");
   font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/roboto-condensed-700.woff2") format("woff2"),
+    url("../../fonts/roboto-condensed-700.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/roboto-500.woff2") format("woff2"),
+    url("../../fonts/roboto-500.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"),
+    url("../../fonts/pt-mono-regular.woff") format("woff");
+  font-display: swap;
 }

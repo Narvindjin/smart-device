@@ -1,0 +1,345 @@
+.footer {
+  background: $color-pearl-black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 280px;
+
+  @include vp-1023 {
+    padding-bottom: 65px;
+  }
+
+  @include vp-767 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-height: 100%;
+  justify-content: space-between;
+  padding-right: 40px;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
+}
+
+.footer__logo {
+  fill: $color-sky-blue;
+}
+
+.footer__logo-link {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__logo-title {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-family: $ff-condensed;
+  font-weight: 700;
+  color: $color-alice-blue-light;
+  margin: 0;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  flex-shrink: 1;
+
+  @include vp-767 {
+    padding-bottom: 20px;
+    margin-right: 0;
+  }
+}
+
+.footer__logo-subtitle {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-family: $ff-roboto;
+  color: $color-alice-blue-transparent;
+  margin: 0;
+}
+
+.footer__icons-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  min-width: 234px;
+
+  @include vp-1023 {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: -5px;
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__social-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+  margin-left: 10px;
+
+  @include vp-1023 {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
+.footer__social-item {
+  margin-right: 15px;
+}
+
+.footer__social-item:last-of-type {
+  margin-right: 0;
+}
+
+.footer__social-link {
+  padding: 5px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  @include vp-1023 {
+    height: auto;
+  }
+
+  @include hover-focus {
+    .footer__social-logo {
+      fill: $color-sky-blue;
+    }
+  }
+}
+
+.footer__social-logo {
+  fill: $color-alice-blue;
+  color: $color-pearl-black;
+  transition: fill $trans-default;
+}
+
+.footer__title {
+  font-family: $ff-condensed;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  font-weight: 400;
+  position: relative;
+
+  @include vp-767 {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+}
+
+.footer__title--opened {
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
+}
+
+@include vp-767 {
+  .footer__title--opened::after {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7h15v1H0V7Z' fill='%23F8FDFF'/%3E%3C/svg%3E");
+  }
+
+  .footer__title--closed::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.97 7.03V0h-.94v7.03H0v.94h7.03V15h.94V7.97H15v-.94H7.97Z' fill='%23F8FDFF'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5px;
+
+  @include vp-1023 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $color-alice-blue-transparent;
+    border-bottom: 1px solid $color-alice-blue-transparent;
+    padding: 20px 25px 0 25px;
+    gap: 0;
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+}
+
+.footer__nav-list {
+  list-style-type: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 25px);
+  row-gap: 2px;
+  column-gap: 30px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  @include vp-1023 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    grid-auto-flow: row;
+    row-gap: 5px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: max-height $trans-default;
+  }
+}
+
+.footer__nav-item {
+  width: 220px;
+}
+
+.footer__nav-item--two-rows {
+  grid-row-end: span 2;
+}
+
+.footer__nav-link {
+  display: inline;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  color: $color-white-transparent;
+  transition: color $trans-default;
+
+  @include vp-767 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+  }
+}
+
+.footer__contacts-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 2;
+  flex-basis: 345px;
+
+  @include vp-1279 {
+    flex-basis: 190px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    border-top: 1px solid $color-alice-blue-transparent;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    flex-basis: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__contacts {
+  font-style: normal;
+
+  @include vp-767 {
+    overflow: hidden;
+    transition: max-height $trans-default;
+  }
+}
+
+.footer__contacts-item {
+  display: inline-block;
+  font-weight: 400;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: $color-white-transparent;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+  @include vp-767 {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+  }
+}
+
+a.footer__contacts-item {
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-default-white;
+  }
+}
+
+.footer__contacts-phone-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @include vp-767 {
+    padding-top: 5px;
+  }
+}
+
+.footer__contacts-phone-item:last-of-type .footer__contacts-item {
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+}

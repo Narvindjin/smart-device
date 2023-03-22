@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  @include vp-1023 {
+    position: absolute;
+  }
+}
+
+.header__wrapper {
+  background: $pearl-black-to-bottom;
+  min-height: $header-height;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  width: 100%;
+  z-index: 3;
+
+  @include vp-1023 {
+    min-height: $header-height-tablet;
+    padding-bottom: 20px;
+  }
+
+  @include vp-767 {
+    min-height: $header-height-mobile;
+    padding-bottom: 10px;
+  }
+}

@@ -3,12 +3,63 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  width: 100%;
+  padding-bottom: 16px;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
     width: 100%;
+  }
+
+  input,
+  textarea {
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 54px;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $color-dark-transparent;
+    color: $color-default-white;
+    border: 2px solid $color-sky-blue;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+
+    transition: border 0.3s ease;
+
+    @media screen and (max-width: 767px) {
+      max-width: unset;
+      width: 100%;
+    }
+
+    &:hover {
+      border: 2px solid rgba(#000000, 0.5);
+    }
+
+    &:focus {
+      border: 2px solid rgba(#000000, 0.8);
+    }
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: $color-white-transparent;
+  }
+
+  textarea {
+    height: 159px;
+    padding-top: 21px;
+    padding-bottom: 23px;
+
+    @include vp-1023 {
+      padding-top: 28px;
+    }
+
+    @include vp-767 {
+      height: 184px;
+      padding-top: 23px;
+    }
   }
 
   label {
@@ -19,34 +70,6 @@
     @media screen and (max-width: 767px) {
       align-items: flex-start;
       flex-direction: column;
-    }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
     }
   }
 
@@ -86,8 +109,6 @@
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
-
       &:focus,
       &:hover {
         border: 2px solid rgba(#22b259, 0.5);
@@ -107,5 +128,13 @@
     &.is-valid {
       color: #15ab07;
     }
+  }
+}
+
+.custom-textarea {
+  padding-bottom: 35px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 30px;
   }
 }
