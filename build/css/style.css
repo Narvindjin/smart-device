@@ -997,6 +997,14 @@ input:-webkit-autofill:focus {
   clip: rect(0 0 0 0);
 }
 
+.custom-toggle input.focus-visible:focus + label {
+  opacity: 0.6;
+}
+
+.custom-toggle input.focus-visible:focus + label {
+  outline: 1px solid #ffffff;
+}
+
 .custom-toggle label {
   position: relative;
   padding-left: 26px;
@@ -1744,12 +1752,6 @@ input:-webkit-autofill:focus {
   overflow: hidden;
 }
 
-.goods__item.focus-visible:focus .goods__back-image {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
 .goods__back-image {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
@@ -1777,6 +1779,12 @@ input:-webkit-autofill:focus {
 .goods__item > a {
   height: 100%;
   display: block;
+}
+
+.goods__item > a.focus-visible:focus .goods__back-image {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .goods__container::before {
@@ -2147,6 +2155,10 @@ input:-webkit-autofill:focus {
   color: #ffffff;
   font-weight: 400;
   position: relative;
+}
+
+.footer__title.focus-visible:focus {
+  outline: 1px solid #000000;
 }
 
 .footer__wrapper {
@@ -2548,6 +2560,8 @@ a.footer__contacts-item.focus-visible:focus {
 
   .is-closed-mobile {
     max-height: 0;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .is-hidden-mobile {
@@ -2758,7 +2772,6 @@ a.footer__contacts-item.focus-visible:focus {
   }
 
   .footer__nav {
-    padding-bottom: 20px;
     margin-right: 0;
   }
 
@@ -2782,17 +2795,23 @@ a.footer__contacts-item.focus-visible:focus {
   .footer__title {
     cursor: pointer;
     margin-bottom: 0;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding: 20px 25px 20px 25px;
   }
 
   .footer__title--opened {
-    margin-bottom: 15px;
+    padding-bottom: 15px;
   }
 
   .footer__title--opened::after {
     position: absolute;
     display: block;
-    right: 0;
+    right: 25px;
     top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     content: "";
     width: 15px;
     height: 15px;
@@ -2803,8 +2822,11 @@ a.footer__contacts-item.focus-visible:focus {
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.97 7.03V0h-.94v7.03H0v.94h7.03V15h.94V7.97H15v-.94H7.97Z' fill='%23F8FDFF'/%3E%3C/svg%3E%0A");
     position: absolute;
     display: block;
-    right: 0;
+    right: 25px;
     top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     content: "";
     width: 15px;
     height: 15px;
@@ -2820,7 +2842,7 @@ a.footer__contacts-item.focus-visible:focus {
     flex-direction: column;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
-    padding: 20px 25px 0 25px;
+    padding: 0 25px 0 25px;
     gap: 0;
     margin-left: -25px;
     margin-right: -25px;
@@ -2838,6 +2860,7 @@ a.footer__contacts-item.focus-visible:focus {
     -webkit-transition: max-height 0.3s ease;
     -o-transition: max-height 0.3s ease;
     transition: max-height 0.3s ease;
+    padding-bottom: 20px;
   }
 
   .footer__nav-link {
@@ -2846,15 +2869,13 @@ a.footer__contacts-item.focus-visible:focus {
   }
 
   .footer__contacts-container {
-    padding-top: 20px;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
     margin-left: -25px;
     margin-right: -25px;
-    padding-left: 25px;
-    padding-right: 25px;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
-    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .footer__contacts {
@@ -2862,6 +2883,7 @@ a.footer__contacts-item.focus-visible:focus {
     -webkit-transition: max-height 0.3s ease;
     -o-transition: max-height 0.3s ease;
     transition: max-height 0.3s ease;
+    margin-bottom: 20px;
   }
 
   .footer__contacts-item {
@@ -2944,6 +2966,10 @@ a.footer__contacts-item.focus-visible:focus {
     opacity: 0.7;
   }
 
+  .custom-toggle input:hover:not(.focus-visible) + label {
+    opacity: 0.6;
+  }
+
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -2982,7 +3008,7 @@ a.footer__contacts-item.focus-visible:focus {
     fill: #f2f5f7;
   }
 
-  .goods__item:hover:not(.focus-visible) .goods__back-image {
+  .goods__item > a:hover:not(.focus-visible) .goods__back-image {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);

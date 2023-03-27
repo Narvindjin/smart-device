@@ -93,6 +93,9 @@
 .is-closed-mobile {
   @include vp-767 {
     max-height: 0;
+    // убираю отступы у закрытых вкладок
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
 

@@ -61,7 +61,6 @@
   flex-shrink: 1;
 
   @include vp-767 {
-    padding-bottom: 20px;
     margin-right: 0;
   }
 }
@@ -162,12 +161,19 @@
   @include vp-767 {
     cursor: pointer;
     margin-bottom: 0;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding: 20px 25px 20px 25px;
+  }
+
+  @include focus {
+    outline: 1px solid $color-default-black;
   }
 }
 
 .footer__title--opened {
   @include vp-767 {
-    margin-bottom: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -175,8 +181,11 @@
   .footer__title--opened::after {
     position: absolute;
     display: block;
-    right: 0;
+    right: 25px;
     top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     content: "";
     width: 15px;
     height: 15px;
@@ -187,8 +196,11 @@
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.97 7.03V0h-.94v7.03H0v.94h7.03V15h.94V7.97H15v-.94H7.97Z' fill='%23F8FDFF'/%3E%3C/svg%3E%0A");
     position: absolute;
     display: block;
-    right: 0;
+    right: 25px;
     top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     content: "";
     width: 15px;
     height: 15px;
@@ -213,7 +225,7 @@
     flex-direction: column;
     border-top: 1px solid $color-alice-blue-transparent;
     border-bottom: 1px solid $color-alice-blue-transparent;
-    padding: 20px 25px 0 25px;
+    padding: 0 25px 0 25px;
     gap: 0;
     margin-left: -25px;
     margin-right: -25px;
@@ -242,6 +254,7 @@
     flex-direction: column;
     overflow: hidden;
     transition: max-height $trans-default;
+    padding-bottom: 20px;
   }
 }
 
@@ -282,14 +295,12 @@
   }
 
   @include vp-767 {
-    padding-top: 20px;
     border-top: 1px solid $color-alice-blue-transparent;
     margin-left: -25px;
     margin-right: -25px;
+    flex-basis: auto;
     padding-left: 25px;
     padding-right: 25px;
-    flex-basis: auto;
-    margin-bottom: 20px;
   }
 }
 
@@ -299,6 +310,7 @@
   @include vp-767 {
     overflow: hidden;
     transition: max-height $trans-default;
+    margin-bottom: 20px;
   }
 }
 

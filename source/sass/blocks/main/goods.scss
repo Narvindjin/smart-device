@@ -52,12 +52,6 @@
   position: relative;
   min-height: 250px;
   overflow: hidden;
-
-  @include hover-focus {
-    .goods__back-image {
-      transform: scale(1.2);
-    }
-  }
 }
 
 .goods__back-image {
@@ -81,6 +75,12 @@
 .goods__item > a {
   height: 100%;
   display: block;
+
+  @include hover-focus {
+    .goods__back-image {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .goods__container::before {

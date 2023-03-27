@@ -23,6 +23,18 @@
     margin: -1px;
 
     clip: rect(0 0 0 0);
+
+    @include hover-focus {
+      + label {
+        opacity: 0.6;
+      }
+    }
+
+    @include focus {
+      + label {
+        outline: 1px solid $color-default-white;
+      }
+    }
   }
 
   label {
