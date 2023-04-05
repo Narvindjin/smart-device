@@ -22,10 +22,13 @@
           <div class="container">
             <nav class="main-nav">
               <a class="main-nav__logo-link" href="#">
-                <img class="main-nav__logo-image" src="img/logo.png" width="215" height="55" srcset="img/logo@2x.png 2x" alt="Логотип Smart Device - умные технологии.">
+                <svg class="main-nav__logo-full" width="215" height="55" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#logo-full"></use>
+                </svg>
                 <svg class="main-nav__logo" width="35" height="35" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#logo"></use>
                 </svg>
+                <span class="visually-hidden">Smart Device - умные технологии.</span>
               </a>
               <ul class="main-nav__contacts-list">
                 <li class="main-nav__contacts-item">
@@ -56,11 +59,11 @@
       <main>
         <section class="intro">
           <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 320px)" srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/hero-mobile.webp 1x, img/hero-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/hero-desk.webp 1x, img/hero-desk@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x">
-            <source media="(max-width: 320px)" srcset="img/hero-mobile.jpg 1x, img/hero-mobile@2x.jpg 2x">
+            <source media="(max-width: 767px)" srcset="img/hero-mobile.jpg 1x, img/hero-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x">
             <img class="intro__image background-image" src="img/hero-desk.jpg" width="1920" height="880" srcset="img/hero-desk@2x.jpg 2x" alt="Печатная плата.">
           </picture>
           <div class="container">
@@ -137,11 +140,11 @@
               <div class="goods__item">
                 <a href="#">
                   <picture>
+                    <source type="image/webp" media="(max-width: 320px)" srcset="img/card-1-mobile.webp 1x, img/card-1-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-1-tablet.webp 1x, img/card-1-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/card-1-mobile.webp 1x, img/card-1-mobile@2x.webp 2x">
                     <source type="image/webp" srcset="img/card-1-desk.webp 1x, img/card-1-desk@2x.webp 2x">
                     <source media="(max-width: 1023px)" srcset="img/card-1-tablet.jpg 1x, img/card-1-tablet@2x.jpg 2x">
-                    <source media="(max-width: 767px)" srcset="img/card-1-mobile.jpg 1x, img/card-1-mobile@2x.jpg 2x">
+                    <source media="(max-width: 320px)" srcset="img/card-1-mobile.jpg 1x, img/card-1-mobile@2x.jpg 2x">
                     <img class="goods__back-image background-image" src="img/card-1-desk.jpg" width="350" height="650" srcset="img/card-1-desk@2x.jpg 2x" alt="Часть печатной платы.">
                   </picture>
                   <div class="goods__content">
@@ -159,10 +162,10 @@
                 <a href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-2-tablet.webp 1x, img/card-2-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/card-2-mobile.webp 1x, img/card-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 320px)" srcset="img/card-2-mobile.webp 1x, img/card-2-mobile@2x.webp 2x">
                     <source type="image/webp" srcset="img/card-2-desk.webp 1x, img/card-2-desk@2x.webp 2x">
                     <source media="(max-width: 1023px)" srcset="img/card-2-tablet.jpg 1x, img/card-2-tablet@2x.jpg 2x">
-                    <source media="(max-width: 767px)" srcset="img/card-2-mobile.jpg 1x, img/card-2-mobile@2x.jpg 2x">
+                    <source media="(max-width: 320px)" srcset="img/card-2-mobile.jpg 1x, img/card-2-mobile@2x.jpg 2x">
                     <img class="goods__back-image background-image" src="img/card-2-desk.jpg" width="350" height="650" srcset="img/card-2-desk@2x.jpg 2x" alt="Часть печатной платы.">
                   </picture>
                   <div class="goods__content">
@@ -180,10 +183,10 @@
                 <a href="#">
                   <picture>
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-3-tablet.webp 1x, img/card-3-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/card-3-mobile.webp 1x, img/card-3-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 320px)" srcset="img/card-3-mobile.webp 1x, img/card-3-mobile@2x.webp 2x">
                     <source type="image/webp" srcset="img/card-3-desk.webp 1x, img/card-3-desk@2x.webp 2x">
                     <source media="(max-width: 1023px)" srcset="img/card-3-tablet.jpg 1x, img/card-3-tablet@2x.jpg 2x">
-                    <source media="(max-width: 767px)" srcset="img/card-3-mobile.jpg 1x, img/card-3-mobile@2x.jpg 2x">
+                    <source media="(max-width: 320px)" srcset="img/card-3-mobile.jpg 1x, img/card-3-mobile@2x.jpg 2x">
                     <img class="goods__back-image background-image" src="img/card-3-desk.jpg" width="350" height="650" srcset="img/card-3-desk@2x.jpg 2x" alt="Часть печатной платы.">
                   </picture>
                   <div class="goods__content">
@@ -227,11 +230,11 @@
                   <textarea id="user-question" name="user-question" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="feedback__submit-container">
-                  <button type="submit" class="btn btn--black feedback__submit">Задать вопрос</button>
                   <div class="custom-toggle custom-toggle--checkbox" data-required data-validate-type="checkbox" data-message-base="Пожалуйста, подтвердите согласие">
                     <input id="user-consent" name="user-consent" type="checkbox" required>
                     <label for="user-consent">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                   </div>
+                  <button type="submit" class="btn btn--black feedback__submit">Задать вопрос</button>
                 </div>
               </form>
             </div>
@@ -242,7 +245,10 @@
         <div class="container footer__container">
           <div class="footer__icons-container">
             <a class="footer__logo-link" href="#">
-              <img src="img/logo.png" width="215" height="55" srcset="img/logo@2x.png 2x" alt="Логотип Smart Device - умные технологии.">
+              <svg class="footer__logo" width="215" height="55" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <use href="img/sprite.svg#logo-full"></use>
+              </svg>
+              <span class="visually-hidden">Smart Device - умные технологии.</span>
             </a>
             <ul class="footer__social-list">
               <li class="footer__social-item">
@@ -343,11 +349,11 @@
               <textarea id="modal-question" name="user-question" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="modal-call__submit-container">
-              <button type="submit" class="btn btn--black modal-call__submit">Отправить</button>
               <div class="custom-toggle custom-toggle--checkbox" data-required data-validate-type="checkbox" data-message-base="Пожалуйста, подтвердите согласие">
                 <input id="modal-consent" name="user-consent" type="checkbox" required>
-                <label for="user-consent">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                <label for="modal-consent">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
               </div>
+              <button type="submit" class="btn btn--black modal-call__submit">Отправить</button>
             </div>
           </form>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>

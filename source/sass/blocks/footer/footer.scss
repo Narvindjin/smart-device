@@ -28,7 +28,15 @@
 }
 
 .footer__logo {
-  fill: $color-sky-blue;
+  fill: $color-alice-blue-light;
+  color: $color-default-white;
+  transition: fill $trans-default, color $trans-default, fill-opacity $trans-default;
+
+  @include hover-focus {
+    fill: $color-sky-blue;
+    color: $color-sky-blue;
+    fill-opacity: 0.7;
+  }
 }
 
 .footer__logo-link {
@@ -254,7 +262,7 @@
     flex-direction: column;
     overflow: hidden;
     transition: max-height $trans-default;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 

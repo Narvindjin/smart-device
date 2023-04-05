@@ -31,8 +31,8 @@
     }
 
     @include focus {
-      + label {
-        outline: 1px solid $color-default-white;
+      + label::before {
+        outline: 2px solid $color-default-black;
       }
     }
   }
@@ -129,8 +129,7 @@
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -40px;
+    top: 100%;
 
     &.is-invalid {
       color: #ff0000;
