@@ -21,15 +21,17 @@
         <div class="header__wrapper">
           <div class="container">
             <nav class="main-nav">
-              <a class="main-nav__logo-link" href="#">
-                <svg class="main-nav__logo-full" width="215" height="55" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                  <use href="img/sprite.svg#logo-full"></use>
-                </svg>
-                <svg class="main-nav__logo" width="35" height="35" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                  <use href="img/sprite.svg#logo"></use>
-                </svg>
-                <span class="visually-hidden">Smart Device - умные технологии.</span>
-              </a>
+              <div class="main-nav__logo-container">
+                <a class="main-nav__logo-link" href="#">
+                  <svg class="main-nav__logo-full" width="215" height="55" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#logo-full"></use>
+                  </svg>
+                  <svg class="main-nav__logo" width="35" height="35" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <use href="img/sprite.svg#logo"></use>
+                  </svg>
+                  <span class="visually-hidden">Smart Device - умные технологии.</span>
+                </a>
+              </div>
               <ul class="main-nav__contacts-list">
                 <li class="main-nav__contacts-item">
                   <a class="main-nav__link" href="mailto:info@sd.ru">
@@ -50,8 +52,10 @@
                   </a>
                 </li>
               </ul>
-              <button type="button" class="btn btn--transparent main-nav__modal-button" data-open-modal="feedback">Заказать
-                звонок</button>
+              <div class="main-nav__button-container">
+                <button type="button" class="btn btn--transparent main-nav__modal-button" data-open-modal="feedback">Заказать
+                  звонок</button>
+              </div>
             </nav>
           </div>
         </div>
