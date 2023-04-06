@@ -244,21 +244,21 @@
 
 .footer__nav-list {
   list-style-type: none;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(5, 25px);
-  row-gap: 2px;
+  display: block;
+  columns: 2;
   column-gap: 30px;
+  column-fill: balance;
   margin: 0;
   padding: 0;
-  height: 100%;
-  max-width: 470px;
+  width: 470px;
 
   @include vp-1023 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
     grid-auto-flow: row;
+    columns: unset;
     row-gap: 5px;
     max-width: none;
+    width: 220px;
   }
 
   @include vp-767 {
@@ -267,15 +267,29 @@
     overflow: hidden;
     transition: max-height $trans-default;
     margin-bottom: 20px;
+    width: unset;
   }
 }
 
 .footer__nav-item {
   width: 220px;
+  margin-bottom: 8px;
+
+  @include vp-1023 {
+    width: unset;
+  }
 }
 
-.footer__nav-item--two-rows {
-  grid-row-end: span 2;
+.footer__nav-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.footer__nav-item--break-after {
+  break-after: column;
+
+  @include vp-1023 {
+    break-after: unset;
+  }
 }
 
 .footer__nav-link {
